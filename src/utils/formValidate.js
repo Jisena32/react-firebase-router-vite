@@ -18,10 +18,9 @@ export const formValidate = () => {
 				return true;
 			},
 		},
-		validateRepassword(getValues) {
+		validateRepassword(value) {
 			return {
-				equals: (v) =>
-					v === getValues('password') || 'no conincien las contraseñas',
+				equals: (v) => v === value || 'no conincien las contraseñas',
 			};
 		},
 	};

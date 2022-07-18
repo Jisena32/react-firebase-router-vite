@@ -1,15 +1,36 @@
 export const erroresFirebase = (code) => {
 	switch (code) {
 		case 'auth/email-already-in-use':
-			return 'Correo en uso, intente con otro';
+			return {
+				code: 'email',
+				message: 'Correo en uso, intente con otro',
+			};
 		case 'auth/invalid-email':
-			return 'Formato email invalido';
+			return {
+				code: 'email',
+				message: 'Formato email invalido',
+			};
 		case 'auth/wrong-password':
-			return 'Contraseña incorrecta';
+			return {
+				code: 'password',
+				message: 'Contraseña incorrecta',
+			};
+
 		case 'auth/user-not-found':
-			return 'Ususario no Encontrado';
+			return {
+				code: 'email',
+				message: 'Ususario no Encontrado',
+			};
+		case 'auth/too-many-requests':
+			return {
+				code: 'email',
+				message: 'Demaciados intentos erroneos',
+			};
 
 		default:
-			return 'ocurrio un error en el sever';
+			return {
+				code: 'email',
+				message: 'ocurrio un error en el sever',
+			};
 	}
 };
