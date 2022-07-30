@@ -15,10 +15,13 @@ const Navbar = () => {
 	return (
 		<div>
 			{user ? (
-				<>
-					<NavLink to="/">Inicio</NavLink>
-					<button onClick={handleClickLogout}>Logout</button>
-				</>
+				<div className="flex bg-primero h-10 justify-between items-center">
+					<div className="pl-4">Logo</div>
+					<div>Busqueda</div>
+					<div className="pr-4 flex ">
+						<div className="mr-2">Avatar</div>
+					</div>
+				</div>
 			) : (
 				<>
 					<NavLink to="/login">Login | </NavLink>

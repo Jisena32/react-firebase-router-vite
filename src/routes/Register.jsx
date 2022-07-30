@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserProvider';
 import { erroresFirebase } from '../utils/erroresFirebase';
 import { formValidate } from '../utils/formValidate';
@@ -87,6 +87,15 @@ const Register = () => {
 				</FormImput>
 
 				<Button text="Register" type="submit" />
+				<div className="mt-1 flex justify-center">
+					<p className="mr-2">Ya tienes una cuenta?</p>
+					<p>
+						Entra{' '}
+						<Link to="/login" className="text-indigo-900">
+							Aqui
+						</Link>
+					</p>
+				</div>
 			</form>
 		</>
 	);
